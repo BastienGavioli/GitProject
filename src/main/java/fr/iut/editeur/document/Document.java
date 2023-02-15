@@ -35,6 +35,10 @@ public class Document {
         this.texte = leftPart + upperText + rightPart;
     }
 
+    public void effacer(int start, int end) {
+        remplacer(start, end, "");
+    }
+
 
     @Override
     public String toString() {
