@@ -1,5 +1,7 @@
 package fr.iut.editeur.document;
 
+import java.util.Locale;
+
 public class Document {
 
     private String texte;
@@ -25,6 +27,14 @@ public class Document {
         String rightPart = this.texte.substring(end);
         this.texte = leftPart + remplacement + rightPart;
     }
+
+    public void majuscules(int start, int end) {
+        String leftPart = this.texte.substring(0, start);
+        String upperText = this.texte.substring(start, end).toUpperCase(new Locale("fr", "FR"));
+        String rightPart = this.texte.substring(end);
+        this.texte = leftPart + upperText + rightPart;
+    }
+
 
     @Override
     public String toString() {
