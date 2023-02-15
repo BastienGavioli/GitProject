@@ -35,6 +35,10 @@ public class Document {
         this.texte = leftPart + upperText + rightPart;
     }
 
+    public void clear() {
+        this.texte = "";
+        this.texte = "a";
+    }
 
     @Override
     public String toString() {
