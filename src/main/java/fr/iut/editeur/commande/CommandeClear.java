@@ -10,6 +10,7 @@ public class CommandeClear extends CommandeDocument{
 
     @Override
     public void executer() {
+        commit();
         this.document.clear();
         super.executer();
     }

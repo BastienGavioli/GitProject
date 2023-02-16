@@ -14,6 +14,7 @@ public class CommandeRemplacer extends CommandeDocument{
             System.err.println("Format attendu : remplacer;indexDébut;indexFin;remplacement");
             return;
         }
+        commit();
         int start = Integer.parseInt(parameters[1]);
         int end = Integer.parseInt(parameters[2]);
         String replacement;

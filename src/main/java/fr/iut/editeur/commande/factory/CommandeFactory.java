@@ -18,11 +18,27 @@ public class CommandeFactory {
 
     public Commande createCommand(String name, Document document, String[] parameters) {
         switch (name) {
-            case "ajouter" : return new CommandeAjouter(document, parameters);
-            case "remplacer": return new CommandeRemplacer(document, parameters);
-            case "majuscules": return new CommandeMajuscules(document, parameters);
-            case "effacer": return new CommandeEffacer(document, parameters);
-            case "clear": return new CommandeClear(document, parameters);
+            case "ajouter" : {
+                return new CommandeAjouter(document, parameters);
+            }
+            case "remplacer": {
+                return new CommandeRemplacer(document, parameters);
+            }
+            case "majuscules": {
+                return new CommandeMajuscules(document, parameters);
+            }
+            case "effacer": {
+                return new CommandeEffacer(document, parameters);
+            }
+            case "clear": {
+                return new CommandeClear(document, parameters);
+            }
+            case "undo": {
+                return new CommandeUndo(document, parameters);
+            }
+            case "redo": {
+                return new CommandeRedo(document, parameters);
+            }
             default: return null;
         }
     }

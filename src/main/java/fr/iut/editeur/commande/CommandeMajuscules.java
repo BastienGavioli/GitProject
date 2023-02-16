@@ -13,6 +13,7 @@ public class CommandeMajuscules extends CommandeDocument {
         if (parameters.length < 3) {
             System.err.println("Format attendu : majuscules;indexDebut;indexFin");
         }
+        commit();
         int start = Integer.parseInt(this.parameters[1]);
         int end = Integer.parseInt(this.parameters[2]);
         this.document.majuscules(start, end);

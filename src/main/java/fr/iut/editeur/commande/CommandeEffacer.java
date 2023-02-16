@@ -14,6 +14,7 @@ public class CommandeEffacer extends CommandeDocument {
             System.err.println("Format attendu : effacer;indexDébut;indexFin");
             return;
         }
+        commit();
         int start = Integer.parseInt(parameters[1]);
         int end = Integer.parseInt(parameters[2]);
         this.document.effacer(start, end);
