@@ -43,6 +43,10 @@ public class Document {
         this.texte = "";
     }
 
+    public void inserer(int index, String texte) {
+        remplacer(index, index, texte);
+    }
+
     @Override
     public String toString() {
         return this.texte;
