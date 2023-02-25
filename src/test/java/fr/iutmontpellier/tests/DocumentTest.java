@@ -20,7 +20,7 @@ public class DocumentTest extends TestCase {
     public void test_document_ajouter_texte_a_texte_deja_rempli() {
         doc.setTexte("Lorem");
         doc.ajouter(" ipsus");
-        assertEquals("Lorem ipsus", doc.getTexte());
+        assertEquals("Lorem ipsuss", doc.getTexte());
     }
 
     public void test_document_clear_texte_quand_texte_vide() {
