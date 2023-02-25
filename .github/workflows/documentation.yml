@@ -1,0 +1,30 @@
+name : documentation.yml
+author: BastienGavioli
+description: generates a Java Documentation for the application. The web files will be published on the branch 
+  "gh-pages" in the root
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generateDoc:
+  runs-on: ubuntu-latest
+  steps:
+    - name: moveToRepository
+      uses: actions/checkout@v3
+    - name: installJava17
+      uses: actions/setup-java@v1
+      with:
+        java-version: 17
+    - name: generateJavaDoc
+      run: mvn javadoc::javadoc
+    - name: publishDocOnBranch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: $
+        publish_dir: ./target/site/apidocs/
+
+permissions:
+  contents: write

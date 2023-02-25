@@ -3,7 +3,7 @@ name : tests
 on: push
 
 jobs:
-  job1:
+  JunitTests:
     runs-on: ubuntu-latest
     steps:
       - name: moveToRepository
