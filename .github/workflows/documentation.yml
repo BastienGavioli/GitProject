@@ -1,4 +1,4 @@
-name : documentation.yml
+name : documentation
 author: BastienGavioli
 description: generates a Java Documentation for the application. The web files will be published on the branch 
   "gh-pages" in the root
