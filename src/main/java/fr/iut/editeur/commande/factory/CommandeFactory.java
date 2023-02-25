@@ -39,6 +39,9 @@ public class CommandeFactory {
             case "redo": {
                 return new CommandeRedo(document, parameters);
             }
+            case "inserer": {
+                return new CommandeInserer(document, parameters);
+            }
             default: return null;
         }
     }
